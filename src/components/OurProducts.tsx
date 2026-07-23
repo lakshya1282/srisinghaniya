@@ -255,7 +255,7 @@ export default function OurProducts() {
                     {p.title}
                   </h3>
                   <div className="w-8 h-8 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center shrink-0 shadow-xs border border-white/10 text-white">
-                    {p.icon && React.cloneElement(p.icon as React.ReactElement, { className: "w-4.5 h-4.5 text-white" })}
+                    {p.icon && React.cloneElement(p.icon as React.ReactElement<{ className?: string }>, { className: "w-4.5 h-4.5 text-white" })}
                   </div>
                 </div>
               </div>
