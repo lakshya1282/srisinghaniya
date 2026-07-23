@@ -78,7 +78,7 @@ export default function Footer() {
               <li><a href="#" className="hover:text-zinc-950 transition-colors">Substation Structures</a></li>
               <li><a href="#" className="hover:text-zinc-950 transition-colors">RSJ Poles</a></li>
               <li><a href="#" className="hover:text-zinc-950 transition-colors">Earthing Solutions</a></li>
-              <li><a href="#" className="hover:text-zinc-950 transition-colors">Gratings & Solar Rails</a></li>
+              <li><a href="#" className="hover:text-zinc-950 transition-colors">Electrogratings & Solar Rails</a></li>
             </ul>
           </div>
 

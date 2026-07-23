@@ -73,7 +73,7 @@ export default function OurProducts() {
     },
     {
       id: "05",
-      title: "Gratings",
+      title: "Electrogratings",
       image: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=600&q=80",
       isLarge: false,
       icon: (

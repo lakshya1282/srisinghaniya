@@ -180,7 +180,7 @@ export default function Hero() {
 
         {/* Left text + CTA: Positioned at the bottom-left */}
         <div className={`max-w-2xl space-y-4 md:space-y-6 transition-all duration-400 ${isBouncing ? "opacity-0 translate-y-6" : "opacity-100 translate-y-0"}`}>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight leading-tight text-white drop-shadow-md">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight leading-tight text-white drop-shadow-md">
             {current.title}
           </h1>
           <div className="space-y-1">

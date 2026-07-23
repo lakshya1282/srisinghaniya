@@ -58,7 +58,7 @@ export default function TrustedManufacturer() {
             <p className="text-base sm:text-lg font-medium leading-relaxed text-zinc-600">
               SriSinghaniya Infrastructures Pvt. Ltd. is a Raipur, Chhattisgarh-based manufacturer
               specializing in the fabrication and galvanizing of transmission towers, substation structures,
-              RSJ poles, earthing solutions, gratings, solar infrastructure products, and railway structures.
+              RSJ poles, earthing solutions, electrogratings, solar infrastructure products, and railway structures.
             </p>
             
             <p className="text-base sm:text-lg font-medium leading-relaxed text-zinc-600">
