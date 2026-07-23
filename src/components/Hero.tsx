@@ -48,6 +48,11 @@ export default function Hero() {
   const [progress, setProgress] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
   const [bounceStyle, setBounceStyle] = useState<React.CSSProperties | null>(null);
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   const staticImgRef = useParallax(0.1);
   const bouncingImgRef = useParallax(0.1);
@@ -146,7 +151,9 @@ export default function Hero() {
   return (
     <section
       ref={heroRef}
-      className="relative w-full h-screen min-h-[550px] md:min-h-[650px] overflow-hidden bg-black text-white select-none"
+      className={`relative w-full h-screen min-h-[550px] md:min-h-[650px] overflow-hidden bg-black text-white select-none transition-transform duration-[1200ms] ease-[cubic-bezier(0.16,1,0.3,1)] ${
+        isMounted ? "translate-y-0" : "-translate-y-full"
+      }`}
     >
       {/* ── Static background (stays until progress bar completes) ── */}
       <div className="absolute inset-0 z-0 overflow-hidden">
