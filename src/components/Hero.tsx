@@ -176,7 +176,7 @@ export default function Hero() {
       )}
 
       {/* ── Content layer ── */}
-      <div className="relative z-30 max-w-[1650px] mx-auto h-full pl-6 sm:pl-10 lg:pl-14 pr-4 sm:pr-8 lg:pr-10 flex flex-col justify-end py-10 md:py-16 gap-8">
+      <div className="relative z-30 max-w-[1650px] mx-auto h-full pl-6 sm:pl-10 lg:pl-18 pr-4 sm:pr-8 lg:pr-10 flex flex-col justify-end pt-10 pb-5 md:pt-16 md:pb-8 gap-8">
 
         {/* Left text + CTA: Positioned at the bottom-left */}
         <div className={`max-w-2xl space-y-4 md:space-y-6 transition-all duration-400 ${isBouncing ? "opacity-0 translate-y-6" : "opacity-100 translate-y-0"}`}>
