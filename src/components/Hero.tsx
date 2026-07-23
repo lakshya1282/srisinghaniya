@@ -176,11 +176,10 @@ export default function Hero() {
       )}
 
       {/* ── Content layer ── */}
-      <div className="relative z-30 max-w-7xl mx-auto h-full px-6 sm:px-8 lg:px-12 flex flex-col justify-between py-10 md:py-16">
-        <div className="hidden md:block" />
+      <div className="relative z-30 max-w-7xl mx-auto h-full px-6 sm:px-8 lg:px-12 flex items-center justify-start">
 
         {/* Left text + CTA */}
-        <div className={`max-w-2xl mt-auto md:mt-0 space-y-4 md:space-y-6 transition-all duration-400 ${isBouncing ? "opacity-0 translate-y-6" : "opacity-100 translate-y-0"}`}>
+        <div className={`max-w-2xl space-y-4 md:space-y-6 transition-all duration-400 ${isBouncing ? "opacity-0 translate-y-6" : "opacity-100 translate-y-0"}`}>
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight leading-tight text-white drop-shadow-md">
             {current.title}
           </h1>
