@@ -144,7 +144,7 @@ export default function OurAdvantages() {
 
           {/* Right Column: Sliding Image Stack Container */}
           <div 
-            className="lg:col-span-5 h-[400px] sm:h-[500px] lg:h-auto min-h-[500px] relative rounded-2xl overflow-hidden shadow-2xl bg-zinc-900 transition-all duration-[2000ms] ease-[cubic-bezier(0.16,1,0.3,1)]"
+            className="lg:col-span-5 h-[400px] sm:h-[500px] lg:h-auto min-h-[500px] relative rounded-2xl overflow-hidden shadow-2xl bg-zinc-900 transition-all duration-[3000ms] ease-[cubic-bezier(0.16,1,0.3,1)]"
             style={{
               clipPath: isVisible ? "inset(0% 0% 0% 0% round 1rem)" : "inset(0% 0% 100% 0% round 1rem)",
               WebkitClipPath: isVisible ? "inset(0% 0% 0% 0% round 1rem)" : "inset(0% 0% 100% 0% round 1rem)",
