@@ -28,6 +28,12 @@ export function useParallax(speed = 0.12) {
     window.addEventListener("resize", updateDimensions);
     window.addEventListener("load", updateDimensions);
 
+    // Delayed re-calculation to account for initial entrance slide-down transitions
+    const delayedTimer = setTimeout(() => {
+      updateDimensions();
+      handleScroll();
+    }, 1500);
+
     // Throttle rendering using requestAnimationFrame to sync with screen refresh rate
     let rAfId: number | null = null;
     
@@ -56,6 +62,7 @@ export function useParallax(speed = 0.12) {
     handleScroll();
 
     return () => {
+      clearTimeout(delayedTimer);
       window.removeEventListener("resize", updateDimensions);
       window.removeEventListener("load", updateDimensions);
       window.removeEventListener("scroll", handleScroll);
