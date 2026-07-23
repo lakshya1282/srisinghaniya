@@ -62,7 +62,7 @@ export default function OurAdvantages() {
           setIsVisible(true);
         }
       },
-      { threshold: 0.20 }
+      { threshold: 0.30 }
     );
     if (sectionRef.current) {
       observer.observe(sectionRef.current);
