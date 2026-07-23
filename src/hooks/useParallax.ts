@@ -69,7 +69,7 @@ export function useParallax(speed = 0.12) {
       if (rAfId !== null) {
         cancelAnimationFrame(rAfId);
       }
-    };
+    };  
   }, [speed]);
 
   return ref;

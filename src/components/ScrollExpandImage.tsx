@@ -4,8 +4,7 @@ import React, { useEffect, useRef, useState } from "react";
 
 export default function ScrollExpandImage() {
   const containerRef = useRef<HTMLDivElement>(null);
-  const [widthPct, setWidthPct] = useState(80); // Starts at 80% width
-  const [imgScale, setImgScale] = useState(1.2); // Starts at 1.2 scale (zoomed in)
+  const [isExpanded, setIsExpanded] = useState(false);
 
   useEffect(() => {
     let rAfId: number | null = null;
@@ -21,20 +20,16 @@ export default function ScrollExpandImage() {
         const rect = containerRef.current.getBoundingClientRect();
         const viewportHeight = window.innerHeight;
 
-        // Element top enters at viewport bottom (progress = 0)
-        // Element top reaches 15% of viewport height (progress = 1)
-        const startPoint = viewportHeight;
-        const endPoint = viewportHeight * 0.15;
+        // Calculate what percentage of the image container height has entered the viewport
+        const visibleHeight = viewportHeight - rect.top;
+        const visibilityRatio = visibleHeight / rect.height;
 
-        const progress = Math.max(0, Math.min(1, (startPoint - rect.top) / (startPoint - endPoint)));
-
-        // Map progress to width percentage (80% to 90%)
-        const calculatedWidth = 80 + progress * 10;
-        setWidthPct(calculatedWidth);
-
-        // Map progress to image scale (1.2 down to 1.0)
-        const calculatedScale = 1.2 - progress * 0.2;
-        setImgScale(calculatedScale);
+        // If 30% or more of the image is visible inside the viewport, expand it
+        if (visibilityRatio >= 0.30 && rect.top < viewportHeight) {
+          setIsExpanded(true);
+        } else {
+          setIsExpanded(false);
+        }
         rAfId = null;
       });
     };
@@ -55,18 +50,16 @@ export default function ScrollExpandImage() {
       className="w-full bg-white flex justify-center pt-0 pb-10 md:pt-0 md:pb-16 overflow-hidden"
     >
       <div
-        className="h-[300px] sm:h-[450px] md:h-[600px] lg:h-[700px] relative transition-all duration-300 ease-out shadow-2xl overflow-hidden"
-        style={{
-          width: `${widthPct}%`,
-          borderRadius: `${Math.max(16, 24 - (widthPct - 80) * 0.8)}px`, // Transition rounded corners from 24px to 16px
-        }}
+        className={`h-[300px] sm:h-[450px] md:h-[600px] lg:h-[700px] relative transition-all duration-[1200ms] ease-[cubic-bezier(0.16,1,0.3,1)] shadow-2xl overflow-hidden ${
+          isExpanded ? "w-[90%] rounded-2xl" : "w-[80%] rounded-[24px]"
+        }`}
       >
         <img
           src="/abt-us.webp"
           alt="SriSinghaniya Infrastructures Facility"
-          className="w-full h-full object-cover transition-transform duration-300 ease-out"
+          className={`w-full h-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(0.16,1,0.3,1)]`}
           style={{
-            transform: `scale(${imgScale})`,
+            transform: isExpanded ? "scale(1.0)" : "scale(1.2)",
           }}
         />
         <div className="absolute inset-0 bg-black/10 transition-colors duration-500" />
