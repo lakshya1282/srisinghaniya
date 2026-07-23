@@ -51,7 +51,7 @@ export default function ScrollExpandImage() {
     >
       <div
         className={`h-[300px] sm:h-[450px] md:h-[600px] lg:h-[700px] relative transition-all duration-[1200ms] ease-[cubic-bezier(0.16,1,0.3,1)] shadow-2xl overflow-hidden ${
-          isExpanded ? "w-[90%] rounded-2xl" : "w-[80%] rounded-[24px]"
+          isExpanded ? "w-[90%] rounded-2xl" : "w-[70%] rounded-[24px]"
         }`}
       >
         <img
