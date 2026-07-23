@@ -151,8 +151,8 @@ export default function Hero() {
   return (
     <section
       ref={heroRef}
-      className={`relative w-full h-screen min-h-[550px] md:min-h-[650px] overflow-hidden bg-black text-white select-none transition-transform duration-[1200ms] ease-[cubic-bezier(0.16,1,0.3,1)] ${
-        isMounted ? "translate-y-0" : "-translate-y-full"
+      className={`relative w-full h-screen min-h-[550px] md:min-h-[650px] overflow-hidden bg-black text-white select-none transition-opacity duration-1000 ease-out ${
+        isMounted ? "opacity-100" : "opacity-0"
       }`}
     >
       {/* ── Static background (stays until progress bar completes) ── */}
