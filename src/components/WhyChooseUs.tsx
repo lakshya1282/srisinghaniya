@@ -92,7 +92,7 @@ export default function WhyChooseUs() {
             Value Proposition
           </span>
           <h2 className="text-4xl sm:text-5xl font-sans font-semibold tracking-tight text-zinc-950">
-            {["Why Choose Sri Singhaniya Infrastructures"].map((line, idx) => (
+            {["Why Choose SriSinghaniya Infrastructures"].map((line, idx) => (
               <span key={idx} className="block overflow-hidden py-1">
                 <span
                   className={`block transition-transform duration-[1200ms] ease-[cubic-bezier(0.16,1,0.3,1)] ${

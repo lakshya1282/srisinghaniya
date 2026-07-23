@@ -100,7 +100,7 @@ export default function Footer() {
         {/* Bottom Bar: Copyright & Legality */}
         <div className="pt-8 border-t border-zinc-200 flex flex-col md:flex-row items-center justify-between gap-4 text-xs font-semibold text-zinc-500">
           <div>
-            © 2026 Sri Singhaniya Group. All rights reserved.
+            © 2026 SriSinghaniya Group. All rights reserved.
           </div>
           <div className="flex flex-wrap items-center gap-x-6 gap-y-2">
             <a href="#" className="hover:text-zinc-950 transition-colors">Legal Disclaimer</a>

@@ -93,7 +93,7 @@ export default function OurAdvantages() {
                 Why Partner With Us
               </span>
               <h2 className="text-4xl sm:text-5xl lg:text-6xl font-sans font-semibold tracking-tight text-zinc-950 leading-tight">
-                {["What sets", "Sri Singhaniya apart."].map((line, idx) => (
+                {["What sets", "SriSinghaniya apart."].map((line, idx) => (
                   <span key={idx} className="block overflow-hidden py-1">
                     <span
                       className={`block transition-transform duration-[1200ms] ease-[cubic-bezier(0.16,1,0.3,1)] ${

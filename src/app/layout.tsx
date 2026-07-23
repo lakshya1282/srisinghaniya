@@ -11,7 +11,7 @@ const rubik = Rubik({
 });
 
 export const metadata: Metadata = {
-  title: "Sri Singhaniya Infrastructures",
+  title: "SriSinghaniya Infrastructures",
   description: "Trusted Manufacturer of Power & Infrastructure Solutions",
 };
 

@@ -63,7 +63,7 @@ export default function ScrollExpandImage() {
       >
         <img
           src="/abt-us.webp"
-          alt="Sri Singhaniya Infrastructures Facility"
+          alt="SriSinghaniya Infrastructures Facility"
           className="w-full h-full object-cover transition-transform duration-300 ease-out"
           style={{
             transform: `scale(${imgScale})`,
