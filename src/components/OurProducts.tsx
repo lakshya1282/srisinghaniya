@@ -129,7 +129,7 @@ export default function OurProducts() {
           setIsVisible(true);
         }
       },
-      { threshold: 0.10 } // Trigger slightly faster (10% visibility)
+      { threshold: 0.30 } // Trigger when 30% visible
     );
     if (sectionRef.current) {
       observer.observe(sectionRef.current);
@@ -172,22 +172,23 @@ export default function OurProducts() {
           
           {/* Row 1: 2 Large Highlighted Cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {largeProducts.map((p) => (
+            {largeProducts.map((p, idx) => (
               <div
                 key={p.id}
-                className="group relative h-[380px] sm:h-[480px] rounded-2xl overflow-hidden shadow-xl border border-zinc-150 cursor-pointer flex flex-col justify-between p-6 sm:p-10 text-white"
+                className="group relative h-[380px] sm:h-[480px] bg-zinc-900 rounded-2xl overflow-hidden shadow-xl border border-zinc-150 cursor-pointer flex flex-col justify-between p-6 sm:p-10 text-white transition-all duration-[2500ms] ease-[cubic-bezier(0.16,1,0.3,1)]"
+                style={{
+                  clipPath: isVisible ? "inset(0% 0% 0% 0% round 1rem)" : "inset(0% 0% 100% 0% round 1rem)",
+                  WebkitClipPath: isVisible ? "inset(0% 0% 0% 0% round 1rem)" : "inset(0% 0% 100% 0% round 1rem)",
+                  transitionDelay: `${idx * 150}ms`,
+                }}
               >
-                {/* Background Image: CSS double-mask reveal top-to-bottom */}
+                {/* Background Image */}
                 <div className="absolute inset-0 z-0 overflow-hidden">
-                  <div className={`mask-reveal-outer ${isVisible ? "active" : ""}`}>
-                    <div className="mask-reveal-inner">
-                      <ParallaxImage
-                        src={p.image}
-                        alt={p.title}
-                        className="w-full h-full object-cover transition-transform duration-300 ease-out"
-                      />
-                    </div>
-                  </div>
+                  <ParallaxImage
+                    src={p.image}
+                    alt={p.title}
+                    className="w-full h-full object-cover transition-transform duration-300 ease-out"
+                  />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-black/25 z-10" />
                 </div>
 
@@ -210,7 +211,7 @@ export default function OurProducts() {
                   </div>
                   
                   {/* Circle Action Button */}
-                  <div className="w-10 h-10 sm:w-12 h-12 rounded-full bg-blue-600 hover:bg-blue-500 flex items-center justify-center transition-colors shadow-lg">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-blue-600 hover:bg-blue-500 flex items-center justify-center transition-colors shadow-lg">
                     <svg className="w-5 h-5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                       <line x1="5" y1="12" x2="19" y2="12" />
                       <polyline points="12 5 19 12 12 19" />
@@ -223,22 +224,23 @@ export default function OurProducts() {
 
           {/* Row 2: 5 Smaller Cards */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
-            {smallProducts.map((p) => (
+            {smallProducts.map((p, idx) => (
               <div
                 key={p.id}
-                className="group relative h-[380px] sm:h-[400px] rounded-2xl overflow-hidden shadow-lg border border-zinc-150 cursor-pointer flex flex-col justify-between p-5 text-white"
+                className="group relative h-[380px] sm:h-[400px] bg-zinc-900 rounded-2xl overflow-hidden shadow-lg border border-zinc-150 cursor-pointer flex flex-col justify-between p-5 text-white transition-all duration-[2500ms] ease-[cubic-bezier(0.16,1,0.3,1)]"
+                style={{
+                  clipPath: isVisible ? "inset(0% 0% 0% 0% round 1rem)" : "inset(0% 0% 100% 0% round 1rem)",
+                  WebkitClipPath: isVisible ? "inset(0% 0% 0% 0% round 1rem)" : "inset(0% 0% 100% 0% round 1rem)",
+                  transitionDelay: `${(idx + largeProducts.length) * 150}ms`,
+                }}
               >
-                {/* Background Image: CSS double-mask reveal top-to-bottom */}
+                {/* Background Image */}
                 <div className="absolute inset-0 z-0 overflow-hidden">
-                  <div className={`mask-reveal-outer ${isVisible ? "active" : ""}`}>
-                    <div className="mask-reveal-inner">
-                      <ParallaxImage
-                        src={p.image}
-                        alt={p.title}
-                        className="w-full h-full object-cover transition-transform duration-300 ease-out"
-                      />
-                    </div>
-                  </div>
+                  <ParallaxImage
+                    src={p.image}
+                    alt={p.title}
+                    className="w-full h-full object-cover transition-transform duration-300 ease-out"
+                  />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent z-10" />
                 </div>
 
