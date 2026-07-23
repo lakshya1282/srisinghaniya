@@ -1,10 +1,12 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
+import { useParallax } from "@/hooks/useParallax";
 
 export default function ScrollExpandImage() {
   const containerRef = useRef<HTMLDivElement>(null);
   const [isExpanded, setIsExpanded] = useState(false);
+  const imgRef = useParallax(0.08); // Parallax hook with a subtle speed factor
 
   useEffect(() => {
     let rAfId: number | null = null;
@@ -51,16 +53,14 @@ export default function ScrollExpandImage() {
     >
       <div
         className={`h-[300px] sm:h-[450px] md:h-[600px] lg:h-[700px] relative transition-all duration-[1200ms] ease-[cubic-bezier(0.16,1,0.3,1)] shadow-2xl overflow-hidden ${
-          isExpanded ? "w-[90%] rounded-2xl" : "w-[70%] rounded-[24px]"
+          isExpanded ? "w-[90%] rounded-2xl" : "w-[60%] rounded-[24px]"
         }`}
       >
         <img
+          ref={imgRef}
           src="/abt-us.webp"
           alt="SriSinghaniya Infrastructures Facility"
-          className={`w-full h-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(0.16,1,0.3,1)]`}
-          style={{
-            transform: isExpanded ? "scale(1.0)" : "scale(1.2)",
-          }}
+          className="w-full h-full object-cover transition-transform duration-300 ease-out"
         />
         <div className="absolute inset-0 bg-black/10 transition-colors duration-500" />
       </div>
