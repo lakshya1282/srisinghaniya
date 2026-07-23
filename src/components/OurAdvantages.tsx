@@ -167,19 +167,7 @@ export default function OurAdvantages() {
               ))}
             </div>
             
-            {/* Active image indicator dot overlays */}
-            <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2.5 z-20 bg-black/25 backdrop-blur-xs px-3.5 py-2 rounded-full">
-              {advantages.map((_, idx) => (
-                <button
-                  key={idx}
-                  onClick={() => setActiveImageIndex(idx)}
-                  className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                    activeImageIndex === idx ? "bg-white scale-125" : "bg-white/40 hover:bg-white/60"
-                  }`}
-                  aria-label={`Go to slide ${idx + 1}`}
-                />
-              ))}
-            </div>
+
           </div>
 
         </div>
