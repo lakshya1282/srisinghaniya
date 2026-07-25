@@ -15,9 +15,16 @@ const SLIDE_DURATION = 6000; // 6 seconds per slide
 export default function AboutHero() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isMounted, setIsMounted] = useState(false);
+  const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
     setIsMounted(true);
+
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   useEffect(() => {
@@ -54,7 +61,13 @@ export default function AboutHero() {
       `}} />
 
       {/* ── Background Slideshow ── */}
-      <div className="absolute inset-0 z-0 overflow-hidden">
+      <div 
+        className="absolute -top-[15%] -bottom-[15%] left-0 right-0 z-0 overflow-hidden"
+        style={{
+          transform: `translate3d(0, ${scrollY * 0.3}px, 0)`,
+          willChange: "transform",
+        }}
+      >
         {images.map((img, index) => {
           const isActive = index === currentIndex;
           const isPrevious = index === (currentIndex - 1 + images.length) % images.length;
