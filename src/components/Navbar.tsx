@@ -6,9 +6,9 @@ export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navLinks = [
-    { name: "ABOUT", hasDropdown: false },
-    { name: "SERVICES", hasDropdown: false },
-    { name: "CONTACT", hasDropdown: false },
+    { name: "ABOUT", href: "/about", hasDropdown: false },
+    { name: "SERVICES", href: "/#services", hasDropdown: false },
+    { name: "CONTACT", href: "/#contact", hasDropdown: false },
   ];
 
   return (
@@ -18,7 +18,7 @@ export default function Navbar() {
           
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
-            <a href="#" className="flex items-center gap-1">
+            <a href="/" className="flex items-center gap-1">
               <span className="text-2xl md:text-3xl font-extrabold tracking-tight bg-gradient-to-r from-white via-gray-100 to-gray-300 bg-clip-text text-transparent drop-shadow-md">
                 YOUR LOGO
               </span>
@@ -30,7 +30,7 @@ export default function Navbar() {
             {navLinks.map((link) => (
               <a
                 key={link.name}
-                href="#"
+                href={link.href}
                 className="text-[12.5px] font-bold tracking-widest text-white hover:text-white/85 transition-colors flex items-center gap-1 py-2 drop-shadow-md"
               >
                 {link.name}
@@ -84,7 +84,7 @@ export default function Navbar() {
           {navLinks.map((link) => (
             <a
               key={link.name}
-              href="#"
+              href={link.href}
               className="block px-3 py-2 rounded-md text-sm font-semibold text-gray-200 hover:text-white hover:bg-white/10 transition-colors"
             >
               {link.name}
