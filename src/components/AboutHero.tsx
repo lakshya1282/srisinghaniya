@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
 
 const images = [
   "/images/about/substation.png",
@@ -64,10 +65,13 @@ export default function AboutHero() {
                 isActive ? "opacity-100 z-10" : "opacity-0 z-0"
               }`}
             >
-              <img
+              <Image
                 src={img}
                 alt="About Us Slideshow"
-                className={`w-full h-full object-cover object-center ${
+                fill
+                priority={index === 0}
+                sizes="100vw"
+                className={`object-cover object-center ${
                   isActive || isPrevious ? "animate-kenburns" : "scale-100"
                 }`}
               />

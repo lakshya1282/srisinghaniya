@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import { useParallax } from "@/hooks/useParallax";
 
 export default function QualityApproach() {
@@ -68,11 +69,13 @@ export default function QualityApproach() {
                     idx === activeImageIdx ? "opacity-100" : "opacity-0"
                   }`}
                 >
-                  <img
-                    ref={item.ref}
+                  <Image
+                    ref={item.ref as any}
                     src={item.src}
                     alt={`SriSinghaniya Quality Image ${idx + 1}`}
-                    className="w-full h-full object-cover contrast-105 brightness-100"
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    className="object-cover contrast-105 brightness-100"
                   />
                   {/* Subtle vignette/bottom shadow for card aesthetics */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent pointer-events-none" />
