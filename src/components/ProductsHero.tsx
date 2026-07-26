@@ -13,10 +13,8 @@ interface ProductItem {
 }
 
 function ParallaxImage({ src, alt, className }: { src: string; alt: string; className?: string }) {
-  const imgRef = useParallax(0.08);
   return (
     <img
-      ref={imgRef}
       src={src}
       alt={alt}
       className={className}
@@ -158,7 +156,9 @@ export default function ProductsHero() {
                 <ParallaxImage
                   src={product.image}
                   alt={product.title}
-                  className="w-full h-full object-cover scale-105"
+                  className={`w-full h-full object-cover scale-105 transition-all duration-1000 ${
+                    isExpanded ? "blur-0" : "blur-[4px]"
+                  }`}
                 />
                 {/* Overlay Gradient */}
                 <div

@@ -1,0 +1,31 @@
+/* Coolors Exported Palette - https://coolors.co/155c9a-cdcece-25354c-274a78-0b3e7f */
+
+- CSV
+
+155C9A,CDCECE,25354C,274A78,0B3E7F
+
+- With #
+
+#155C9A, #CDCECE, #25354C, #274A78, #0B3E7F
+
+- Array
+
+["155C9A","CDCECE","25354C","274A78","0B3E7F"]
+
+- Object
+
+{"Baltic Blue":"155C9A","Silver":"CDCECE","Deep Space Blue":"25354C","Dusk Blue":"274A78","Regal Navy":"0B3E7F"}
+
+- Extended Array
+
+[{"name":"Baltic Blue","hex":"155C9A","rgb":[21,92,154],"cmyk":[86,40,0,40],"hsb":[208,86,60],"hsl":[208,76,34],"lab":[38,3,-40]},{"name":"Silver","hex":"CDCECE","rgb":[205,206,206],"cmyk":[0,0,0,19],"hsb":[180,0,81],"hsl":[180,1,81],"lab":[83,0,0]},{"name":"Deep Space Blue","hex":"25354C","rgb":[37,53,76],"cmyk":[51,30,0,70],"hsb":[215,51,30],"hsl":[215,35,22],"lab":[22,1,-16]},{"name":"Dusk Blue","hex":"274A78","rgb":[39,74,120],"cmyk":[68,38,0,53],"hsb":[214,68,47],"hsl":[214,51,31],"lab":[31,3,-30]},{"name":"Regal Navy","hex":"0B3E7F","rgb":[11,62,127],"cmyk":[91,51,0,50],"hsb":[214,91,50],"hsl":[214,84,27],"lab":[27,11,-41]}]
+
+- XML
+
+<palette>
+  <color name="Baltic Blue" hex="155C9A" r="21" g="92" b="154" />
+  <color name="Silver" hex="CDCECE" r="205" g="206" b="206" />
+  <color name="Deep Space Blue" hex="25354C" r="37" g="53" b="76" />
+  <color name="Dusk Blue" hex="274A78" r="39" g="74" b="120" />
+  <color name="Regal Navy" hex="0B3E7F" r="11" g="62" b="127" />
+</palette>

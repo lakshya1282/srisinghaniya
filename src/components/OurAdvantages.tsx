@@ -23,6 +23,37 @@ function ParallaxImage({ src, alt, className }: { src: string; alt: string; clas
   );
 }
 
+const getMaskStyles = (id: string, isVisible: boolean): React.CSSProperties => {
+  let initialClip = "";
+  let delay = 0;
+  switch (id) {
+    case "01": // left to right
+      initialClip = isVisible ? "inset(0% 0% 0% 0%)" : "inset(0% 100% 0% 0%)";
+      delay = 0;
+      break;
+    case "02": // top to bottom
+      initialClip = isVisible ? "inset(0% 0% 0% 0%)" : "inset(0% 0% 100% 0%)";
+      delay = 400;
+      break;
+    case "04": // right to left (below second card)
+      initialClip = isVisible ? "inset(0% 0% 0% 0%)" : "inset(0% 0% 0% 100%)";
+      delay = 800;
+      break;
+    case "03": // bottom to top (left of fourth card)
+      initialClip = isVisible ? "inset(0% 0% 0% 0%)" : "inset(100% 0% 0% 0%)";
+      delay = 1200;
+      break;
+    default:
+      initialClip = "inset(0% 0% 0% 0%)";
+  }
+  return {
+    clipPath: initialClip,
+    WebkitClipPath: initialClip,
+    transition: "clip-path 1.4s cubic-bezier(0.16, 1, 0.3, 1), -webkit-clip-path 1.4s cubic-bezier(0.16, 1, 0.3, 1)",
+    transitionDelay: `${delay}ms`,
+  };
+};
+
 export default function OurAdvantages() {
   const [activeImageIndex, setActiveImageIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
@@ -64,7 +95,7 @@ export default function OurAdvantages() {
           setIsVisible(true);
         }
       },
-      { threshold: 0.30 }
+      { threshold: 0.40 }
     );
     if (sectionRef.current) {
       observer.observe(sectionRef.current);
@@ -115,6 +146,7 @@ export default function OurAdvantages() {
               {advantages.map((item) => (
                 <div
                   key={item.id}
+                  style={getMaskStyles(item.id, isVisible)}
                   className="p-8 rounded-2xl border border-zinc-200/60 bg-white shadow-md hover:shadow-lg transition-shadow duration-300 select-none"
                 >
                   <div className="flex items-center gap-3">
