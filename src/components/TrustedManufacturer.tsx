@@ -6,7 +6,7 @@ import { useTextParallax } from "@/hooks/useTextParallax";
 export default function TrustedManufacturer() {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
-  const textRef = useTextParallax<HTMLDivElement>(-0.03);
+  const textRef = useTextParallax<HTMLDivElement>(0.015);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -28,7 +28,7 @@ export default function TrustedManufacturer() {
   return (
     <section
       ref={sectionRef}
-      className="w-full bg-white text-zinc-900 pt-8 pb-6 md:pt-12 md:pb-10 overflow-hidden transition-colors duration-300"
+      className="w-full bg-white text-zinc-900 pt-8 pb-20 md:pt-12 md:pb-28 overflow-hidden transition-colors duration-300"
     >
       <div className="max-w-[1650px] mx-auto px-4 sm:px-8 lg:px-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-20 items-start">
