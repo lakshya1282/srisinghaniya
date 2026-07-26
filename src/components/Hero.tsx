@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useRef, useCallback } from "react";
 import { useParallax } from "@/hooks/useParallax";
+import { useTextParallax } from "@/hooks/useTextParallax";
 
 interface Slide {
   id: number;
@@ -56,6 +57,8 @@ export default function Hero() {
 
   const staticImgRef = useParallax(0.1);
   const bouncingImgRef = useParallax(0.1);
+  const titleRef = useTextParallax<HTMLHeadingElement>(-0.04);
+  const textRef = useTextParallax<HTMLDivElement>(-0.02);
 
   const heroRef = useRef<HTMLElement>(null);
   const firstCardRef = useRef<HTMLDivElement>(null);
@@ -180,10 +183,10 @@ export default function Hero() {
 
         {/* Left text + CTA: Positioned at the bottom-left */}
         <div className={`max-w-2xl space-y-4 md:space-y-6 transition-all duration-400 ${isBouncing ? "opacity-0 translate-y-6" : "opacity-100 translate-y-0"}`}>
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight leading-tight text-white drop-shadow-md">
+          <h1 ref={titleRef} className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight leading-tight text-white drop-shadow-md">
             {current.title}
           </h1>
-          <div className="space-y-1">
+          <div ref={textRef} className="space-y-1">
             {current.subtext.map((t, i) => (
               <p key={i} className="text-base sm:text-lg md:text-xl font-medium text-gray-200 tracking-wide">{t}</p>
             ))}

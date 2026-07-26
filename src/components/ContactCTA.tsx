@@ -2,11 +2,14 @@
 
 import React, { useEffect, useRef, useState } from "react";
 import { useParallax } from "@/hooks/useParallax";
+import { useTextParallax } from "@/hooks/useTextParallax";
 
 export default function ContactCTA() {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
   const imgRef = useParallax(0.08);
+  const titleRef = useTextParallax<HTMLHeadingElement>(-0.04);
+  const descRef = useTextParallax<HTMLParagraphElement>(-0.02);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -46,7 +49,7 @@ export default function ContactCTA() {
             <span className="text-xs uppercase tracking-widest text-zinc-500 font-bold">
               Get in Touch
             </span>
-            <h2 className="text-4xl sm:text-5xl font-sans font-semibold tracking-tight leading-tight text-zinc-950">
+            <h2 ref={titleRef} className="text-4xl sm:text-5xl font-sans font-semibold tracking-tight leading-tight text-zinc-950">
               {["Have a project in mind?"].map((line, idx) => (
                 <span key={idx} className="block overflow-hidden py-1">
                   <span
@@ -59,7 +62,7 @@ export default function ContactCTA() {
                 </span>
               ))}
             </h2>
-            <p className="text-zinc-600 font-medium text-base sm:text-lg max-w-md leading-relaxed">
+            <p ref={descRef} className="text-zinc-600 font-medium text-base sm:text-lg max-w-md leading-relaxed">
               Get in touch with our team to discuss your fabrication and galvanizing requirements.
             </p>
           </div>

@@ -1,10 +1,12 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
+import { useTextParallax } from "@/hooks/useTextParallax";
 
 export default function TrustedManufacturer() {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
+  const textRef = useTextParallax<HTMLDivElement>(-0.03);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -51,6 +53,7 @@ export default function TrustedManufacturer() {
 
           {/* Right Column: Slide from Right to Left Content */}
           <div
+            ref={textRef}
             className={`lg:col-span-6 flex flex-col gap-6 lg:gap-8 transition-all duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] delay-100 ${
               isVisible ? "translate-x-0 opacity-100" : "translate-x-16 opacity-0"
             }`}

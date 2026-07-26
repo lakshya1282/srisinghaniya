@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import { useParallax } from "@/hooks/useParallax";
+import { useTextParallax } from "@/hooks/useTextParallax";
 
 interface TrustItem {
   id: string;
@@ -28,6 +29,10 @@ export default function WhyChooseUs() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
+
+  const headerRef = useTextParallax<HTMLHeadingElement>(-0.03);
+  const activeTitleRef = useTextParallax<HTMLHeadingElement>(-0.04);
+  const activeDescRef = useTextParallax<HTMLParagraphElement>(-0.02);
 
   const trustItems: TrustItem[] = [
     {
@@ -91,7 +96,7 @@ export default function WhyChooseUs() {
           <span className="text-xs uppercase tracking-widest text-zinc-500 font-bold">
             Value Proposition
           </span>
-          <h2 className="text-4xl sm:text-5xl font-sans font-semibold tracking-tight text-zinc-950">
+          <h2 ref={headerRef} className="text-4xl sm:text-5xl font-sans font-semibold tracking-tight text-zinc-950">
             {["Why Choose SriSinghaniya Infrastructures"].map((line, idx) => (
               <span key={idx} className="block overflow-hidden py-1">
                 <span
@@ -143,11 +148,11 @@ export default function WhyChooseUs() {
                   <div className={`space-y-4 transition-all duration-700 transform ${
                     isActive ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10 pointer-events-none"
                   }`}>
-                    <h3 className="text-2xl sm:text-4xl font-extrabold tracking-tight max-w-xl leading-none">
+                    <h3 ref={isActive ? activeTitleRef : undefined} className="text-2xl sm:text-4xl font-extrabold tracking-tight max-w-xl leading-none">
                       {item.title}
                     </h3>
                     <div className="w-12 h-[3px] bg-white/50" />
-                    <p className="text-zinc-200 text-sm sm:text-base font-semibold max-w-lg leading-relaxed uppercase tracking-wide">
+                    <p ref={isActive ? activeDescRef : undefined} className="text-zinc-200 text-sm sm:text-base font-semibold max-w-lg leading-relaxed uppercase tracking-wide">
                       {item.desc}
                     </p>
                     <div className="pt-2">

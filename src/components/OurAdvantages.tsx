@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import { useParallax } from "@/hooks/useParallax";
+import { useTextParallax } from "@/hooks/useTextParallax";
 
 interface AdvantageItem {
   id: string;
@@ -26,6 +27,7 @@ export default function OurAdvantages() {
   const [activeImageIndex, setActiveImageIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
+  const gridRef = useTextParallax<HTMLDivElement>(-0.02);
 
   const advantages: AdvantageItem[] = [
     {
@@ -109,7 +111,7 @@ export default function OurAdvantages() {
             </div>
 
             {/* Blocks Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
+            <div ref={gridRef} className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
               {advantages.map((item) => (
                 <div
                   key={item.id}

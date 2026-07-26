@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
+import { useTextParallax } from "@/hooks/useTextParallax";
 
 const images = [
   "/images/about/substation.png",
@@ -16,6 +17,9 @@ export default function AboutHero() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isMounted, setIsMounted] = useState(false);
   const [scrollY, setScrollY] = useState(0);
+
+  const titleRef = useTextParallax<HTMLHeadingElement>(-0.04);
+  const textRef = useTextParallax<HTMLParagraphElement>(-0.02);
 
   useEffect(() => {
     setIsMounted(true);
@@ -103,10 +107,10 @@ export default function AboutHero() {
           <span className="text-xs md:text-sm font-semibold tracking-widest text-blue-400 uppercase">
             Get to Know Us
           </span>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight text-white drop-shadow-md">
+          <h1 ref={titleRef} className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight text-white drop-shadow-md">
             About us
           </h1>
-          <p className="text-base sm:text-lg md:text-xl font-medium text-gray-200 tracking-wide max-w-xl leading-relaxed">
+          <p ref={textRef} className="text-base sm:text-lg md:text-xl font-medium text-gray-200 tracking-wide max-w-xl leading-relaxed">
             Delivering robust power infrastructure and quality engineering solutions across transmission networks, substations, and industrial structures.
           </p>
           <div className="pt-2">
