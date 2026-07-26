@@ -7,6 +7,7 @@ export default function Navbar() {
 
   const navLinks = [
     { name: "ABOUT", href: "/about", hasDropdown: false },
+    { name: "PRODUCTS", href: "/products", hasDropdown: false },
     { name: "SERVICES", href: "/#services", hasDropdown: false },
     { name: "CONTACT", href: "/#contact", hasDropdown: false },
   ];
