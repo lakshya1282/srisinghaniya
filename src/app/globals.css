@@ -8,13 +8,16 @@
 @theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-rubik);
+  --font-sans: var(--font-vazirmatn), sans-serif;
+  --font-heading: var(--font-ivy-mode), serif;
+  --font-eyebrow: var(--font-inter), sans-serif;
+  --font-vazir: var(--font-vazirmatn), sans-serif;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-rubik), Arial, sans-serif;
+  font-family: var(--font-vazirmatn), sans-serif;
 }
 
 /* ============================================
@@ -119,6 +122,53 @@ body {
 
 .mask-reveal-outer.active .mask-reveal-inner {
   transform: translateY(0);
+}
+
+/* ============================================
+   Global Typography Skinning Rules
+   ============================================ */
+
+/* 1. IvyMode Regular for section h1/h2/h3 headings */
+section h1, 
+section h2, 
+section h3,
+h1.font-extrabold,
+.font-heading {
+  font-family: var(--font-ivy-mode), serif !important;
+  font-weight: 400 !important;
+}
+
+/* 2. Inter Regular for eyebrow/subtitle texts */
+.eyebrow,
+section span.uppercase,
+span.tracking-widest,
+span.tracking-wider {
+  font-family: var(--font-inter), sans-serif !important;
+  font-weight: 400 !important;
+}
+
+/* 3. Vazirmatn Regular for navigation header links and body paragraph/content */
+header nav a,
+header a[href],
+header button,
+p,
+.text-zinc-600,
+.text-zinc-500,
+span.text-zinc-600,
+span.text-zinc-500 {
+  font-family: var(--font-vazirmatn), sans-serif !important;
+  font-weight: 400 !important;
+}
+
+/* 4. Vazirmatn Medium for CTAs/Buttons */
+button,
+a.bg-zinc-950,
+a.bg-white,
+a.border-zinc-900,
+.cta-button,
+a.px-6.py-3 {
+  font-family: var(--font-vazirmatn), sans-serif !important;
+  font-weight: 500 !important;
 }
 
 
