@@ -118,13 +118,14 @@ export default function ProductsList() {
   }, []);
 
   return (
-    <section className="w-full bg-white text-zinc-900 pb-20 overflow-hidden">
+    <section className="w-full bg-background text-zinc-900 pb-20 overflow-hidden">
       
       {/* Section Title Header */}
-      <div className="max-w-[1650px] mx-auto px-4 sm:px-8 lg:px-10 pt-4 pb-8 md:pt-6 md:pb-12 border-t border-zinc-100">
-        <span className="text-xs uppercase tracking-widest text-zinc-500 font-bold mb-3 block">
-          Full Catalog
+      <div className="max-w-[1650px] mx-auto px-4 sm:px-8 lg:px-10 pt-4 pb-8 md:pt-6 md:pb-12 border-t border-zinc-100 space-y-2">
+        <span className="text-xs uppercase tracking-widest text-zinc-500 font-bold font-eyebrow">
+          Full Product Directory
         </span>
+        <div className="w-12 h-0.5 bg-regal-navy" />
         <h2 className="text-4xl sm:text-5xl lg:text-6xl font-sans font-bold text-zinc-950 tracking-tight leading-none">
           Our Products
         </h2>
@@ -164,7 +165,7 @@ export default function ProductsList() {
                     </div>
                   </div>
                   {product.highlighted && (
-                    <div className="absolute top-6 left-6 z-20 px-4 py-1.5 bg-blue-600 text-white text-[11px] font-bold tracking-widest uppercase rounded-sm shadow-md">
+                    <div className="absolute top-6 left-6 z-20 px-4 py-1.5 bg-regal-navy text-white text-[11px] font-bold tracking-widest uppercase rounded-sm shadow-md">
                       Featured Range
                     </div>
                   )}
@@ -183,7 +184,7 @@ export default function ProductsList() {
                   }`}
                 >
                   <div className="flex items-center gap-3">
-                    <span className="text-base font-extrabold text-blue-600 tracking-wider">
+                    <span className="text-base font-extrabold text-regal-navy tracking-wider">
                       {product.number}
                     </span>
                     <div className="w-8 h-px bg-zinc-200" />
@@ -204,13 +205,13 @@ export default function ProductsList() {
 
                   <div className="pt-2 flex flex-wrap gap-3">
                     <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-zinc-100 text-zinc-700 text-sm font-semibold">
-                      <svg className="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                      <svg className="w-4 h-4 text-regal-navy" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
                         <polyline points="20 6 9 17 4 12"></polyline>
                       </svg>
                       In-House Galvanized
                     </span>
                     <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-zinc-100 text-zinc-700 text-sm font-semibold">
-                      <svg className="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                      <svg className="w-4 h-4 text-regal-navy" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
                         <polyline points="20 6 9 17 4 12"></polyline>
                       </svg>
                       Lab-Tested Quality
@@ -238,9 +239,10 @@ export default function ProductsList() {
           <div className="z-10 shrink-0">
             <a
               href="/#contact"
-              className="inline-block bg-zinc-950 text-white hover:bg-zinc-800 transition-colors font-bold text-xs uppercase tracking-widest px-6 py-3.5 rounded-sm shadow-md"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-regal-navy hover:bg-regal-navy/90 text-white font-bold text-xs uppercase tracking-widest transition-all duration-300 rounded-sm shadow-md"
             >
-              Enquire about a product
+              <span>Enquire about a product</span>
+              <span className="text-sm">→</span>
             </a>
           </div>
           {/* Subtle grid pattern background */}

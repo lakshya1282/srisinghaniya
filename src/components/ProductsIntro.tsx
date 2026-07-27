@@ -33,16 +33,19 @@ export default function ProductsIntro() {
   return (
     <section
       ref={sectionRef}
-      className="w-full bg-white text-zinc-900 pt-16 md:pt-24 pb-4 md:pb-6 overflow-hidden transition-colors duration-300"
+      className="w-full bg-background text-zinc-900 pt-16 md:pt-24 pb-4 md:pb-6 overflow-hidden transition-colors duration-300"
     >
       <div className="max-w-[1650px] mx-auto px-4 sm:px-8 lg:px-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-start">
           
           {/* Left Column: Mask Reveal Title */}
           <div className="lg:col-span-6 flex flex-col">
-            <span className="text-xs uppercase tracking-widest text-zinc-500 font-bold mb-4">
-              Our Capabilities
-            </span>
+            <div className="space-y-2 mb-6">
+              <span className="text-xs uppercase tracking-widest text-zinc-500 font-bold font-eyebrow">
+                Our Capabilities
+              </span>
+              <div className="w-12 h-0.5 bg-regal-navy" />
+            </div>
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-sans font-semibold tracking-tight text-zinc-950 leading-[1.1] flex flex-col">
               {["Manufacturing", "The Best In", "Infrastructure", "Engineering"].map((line, idx) => (
                 <span key={idx} className="block overflow-hidden py-1">

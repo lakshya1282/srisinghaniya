@@ -10,7 +10,7 @@ import Footer from "@/components/Footer";
 
 export default function AboutPage() {
   return (
-    <main className="min-h-screen bg-white font-sans text-gray-900">
+    <main className="min-h-screen bg-background font-sans text-foreground">
       <Navbar />
       <AboutHero />
       <AboutStory />

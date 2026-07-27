@@ -28,7 +28,7 @@ export default function TrustedManufacturer() {
   return (
     <section
       ref={sectionRef}
-      className="w-full bg-white text-zinc-900 pt-8 pb-20 md:pt-12 md:pb-28 overflow-hidden transition-colors duration-300"
+      className="w-full bg-background text-zinc-900 pt-8 pb-20 md:pt-12 md:pb-28 overflow-hidden transition-colors duration-300"
     >
       <div className="max-w-[1650px] mx-auto px-4 sm:px-8 lg:px-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-20 items-start">
@@ -70,16 +70,17 @@ export default function TrustedManufacturer() {
               toward expanding our reach further in the years ahead.
             </p>
             
-            <p className="text-lg sm:text-xl font-bold leading-relaxed text-zinc-950 italic border-l-4 border-zinc-900 pl-4 my-2">
+            <p className="text-lg sm:text-xl font-bold leading-relaxed text-zinc-950 italic border-l-4 border-regal-navy pl-4 my-2">
               Every product that leaves our facility is built on one principle: “Long term durability”
             </p>
 
             <div className="pt-4">
               <a
                 href="#"
-                className="inline-block px-8 py-3.5 border border-zinc-900 text-zinc-900 font-bold text-xs uppercase tracking-widest hover:bg-zinc-900 hover:text-white transition-all duration-300"
+                className="inline-flex items-center gap-2 px-8 py-3.5 bg-regal-navy text-white font-bold text-xs uppercase tracking-widest hover:bg-regal-navy/90 transition-all duration-300"
               >
-                About Us
+                <span>Our Products</span>
+                <span className="text-xs">→</span>
               </a>
             </div>
           </div>

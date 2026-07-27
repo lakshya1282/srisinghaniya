@@ -28,7 +28,7 @@ export default function OurFacility() {
       title: "In-House Fabrication",
       desc: "Precision shearing, cutting, punching, and structural assembly.",
       icon: (
-        <svg className="w-5 h-5 text-zinc-700" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+        <svg className="w-5 h-5 text-regal-navy" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" d="M14.7 12.78a3 3 0 01-3.4 2.9M9.2 12.78a3 3 0 003.4 2.9m4.1-12.7a9 9 0 010 13.6M4.5 9a9 9 0 000 6M12 3v18" />
         </svg>
       ),
@@ -37,7 +37,7 @@ export default function OurFacility() {
       title: "Hot-Dip Galvanizing",
       desc: "Modern bath offering heavy zinc coating for structural longevity.",
       icon: (
-        <svg className="w-5 h-5 text-zinc-700" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+        <svg className="w-5 h-5 text-regal-navy" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
         </svg>
       ),
@@ -46,7 +46,7 @@ export default function OurFacility() {
       title: "Quality Testing Lab",
       desc: "Detailed physical and chemical checking with lab certifications.",
       icon: (
-        <svg className="w-5 h-5 text-zinc-700" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+        <svg className="w-5 h-5 text-regal-navy" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
         </svg>
       ),
@@ -55,7 +55,7 @@ export default function OurFacility() {
       title: "Dispatch Yard",
       desc: "Systematic packing and quick logistics coordination for PAN India delivery.",
       icon: (
-        <svg className="w-5 h-5 text-zinc-700" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+        <svg className="w-5 h-5 text-regal-navy" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
         </svg>
       ),
@@ -73,9 +73,12 @@ export default function OurFacility() {
           {/* Left Column: Details with Title Mask Reveal */}
           <div className="lg:col-span-6 flex flex-col gap-6 lg:gap-8">
             <div>
-              <span className="text-xs uppercase tracking-widest text-zinc-500 font-bold block mb-3">
-                Manufacturing Unit
-              </span>
+              <div className="space-y-2 mb-4">
+                <span className="text-xs uppercase tracking-widest text-zinc-500 font-bold block">
+                  Manufacturing Unit
+                </span>
+                <div className="w-12 h-0.5 bg-regal-navy" />
+              </div>
               
               {/* Mask reveal title */}
               <div className="overflow-hidden py-1">
@@ -99,7 +102,7 @@ export default function OurFacility() {
               </p>
 
               {/* Styled Address Card */}
-              <div className="bg-zinc-50 border-l-[6px] border-y border-r border-zinc-200/80 border-l-zinc-800 rounded-r-2xl rounded-l-md p-6 shadow-xs">
+              <div className="bg-secondary-surface border-l-[6px] border-y border-r border-zinc-200/80 border-l-regal-navy rounded-r-2xl rounded-l-md p-6 shadow-xs">
                 <p className="text-base sm:text-lg md:text-xl font-bold text-zinc-950 leading-relaxed font-sans">
                   Opposite Gauri Rice Industries, Donde Pacheda Road, Near Donde Kalan, Raipur, Chhattisgarh
                 </p>
@@ -114,7 +117,7 @@ export default function OurFacility() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
                 {capabilities.map((cap, index) => (
                   <div key={index} className="flex gap-4 p-4 rounded-xl border border-zinc-100 bg-zinc-50/50">
-                    <div className="flex items-center justify-center w-10 h-10 rounded-full bg-white border border-zinc-200/80 shadow-xs shrink-0">
+                    <div className="flex items-center justify-center w-10 h-10 rounded-full bg-secondary-surface shadow-xs shrink-0 text-regal-navy">
                       {cap.icon}
                     </div>
                     <div className="flex flex-col gap-0.5">

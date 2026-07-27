@@ -25,12 +25,12 @@ export default function OurValues() {
         <svg className="w-24 h-24 sm:w-36 sm:h-36 md:w-80 md:h-80 lg:w-[380px] lg:h-[380px] drop-shadow-[0_10px_20px_rgba(0,0,0,0.04)] shrink-0" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#71717a" />
-              <stop offset="100%" stopColor="#27272a" />
+              <stop offset="0%" stopColor="#033D83" />
+              <stop offset="100%" stopColor="#01234f" />
             </linearGradient>
             <linearGradient id="metalGrad" x1="0%" y1="100%" x2="100%" y2="0%">
-              <stop offset="0%" stopColor="#a1a1aa" />
-              <stop offset="100%" stopColor="#52525b" />
+              <stop offset="0%" stopColor="#2563eb" />
+              <stop offset="100%" stopColor="#033D83" />
             </linearGradient>
           </defs>
           {/* Outer shield structure */}
@@ -47,8 +47,8 @@ export default function OurValues() {
           <rect className="svg-animate-draw" x="75" y="85" width="22" height="42" rx="11" transform="rotate(-45 75 85)" stroke="url(#metalGrad)" strokeWidth="4" fill="none" />
           <rect className="svg-animate-draw" x="103" y="73" width="22" height="42" rx="11" transform="rotate(-45 103 73)" stroke="url(#shieldGrad)" strokeWidth="4" fill="none" />
           {/* Sparkles of durability */}
-          <path className="svg-animate-draw" d="M145 70 L150 75 M150 70 L145 75" stroke="#71717a" strokeWidth="2.5" strokeLinecap="round" />
-          <path className="svg-animate-draw" d="M50 120 L55 125 M55 120 L50 125" stroke="#a1a1aa" strokeWidth="2" strokeLinecap="round" />
+          <path className="svg-animate-draw" d="M145 70 L150 75 M150 70 L145 75" stroke="#033D83" strokeWidth="2.5" strokeLinecap="round" />
+          <path className="svg-animate-draw" d="M50 120 L55 125 M55 120 L50 125" stroke="#2563eb" strokeWidth="2" strokeLinecap="round" />
         </svg>
       ),
     },
@@ -61,8 +61,8 @@ export default function OurValues() {
         <svg className="w-24 h-24 sm:w-36 sm:h-36 md:w-80 md:h-80 lg:w-[380px] lg:h-[380px] drop-shadow-[0_10px_20px_rgba(0,0,0,0.04)] shrink-0" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <linearGradient id="qualityGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#71717a" />
-              <stop offset="100%" stopColor="#27272a" />
+              <stop offset="0%" stopColor="#033D83" />
+              <stop offset="100%" stopColor="#01234f" />
             </linearGradient>
           </defs>
           {/* Certified Seal outer starburst path */}
@@ -75,7 +75,7 @@ export default function OurValues() {
             fill="rgba(34, 197, 94, 0.02)"
           />
           {/* Inner concentric ring */}
-          <circle className="svg-animate-draw svg-flow-lines" cx="100" cy="97" r="48" stroke="#71717a" strokeWidth="2.5" />
+          <circle className="svg-animate-draw svg-flow-lines" cx="100" cy="97" r="48" stroke="#033D83" strokeWidth="2.5" />
           {/* Glowing Check Mark */}
           <path
             className="svg-animate-draw"
@@ -97,20 +97,20 @@ export default function OurValues() {
         <svg className="w-24 h-24 sm:w-36 sm:h-36 md:w-80 md:h-80 lg:w-[380px] lg:h-[380px] drop-shadow-[0_10px_20px_rgba(0,0,0,0.04)] shrink-0" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <linearGradient id="timeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#71717a" />
-              <stop offset="100%" stopColor="#27272a" />
+              <stop offset="0%" stopColor="#033D83" />
+              <stop offset="100%" stopColor="#01234f" />
             </linearGradient>
           </defs>
           {/* Clock Outer Rim */}
           <circle className="svg-animate-draw" cx="100" cy="100" r="70" stroke="url(#timeGrad)" strokeWidth="4.5" fill="rgba(245, 158, 11, 0.02)" />
           {/* Speed line accents around the clock */}
-          <path className="svg-flow-lines" d="M15 100 H30 M15 85 H25 M20 70 H30" stroke="#71717a" strokeWidth="3" strokeLinecap="round" />
+          <path className="svg-flow-lines" d="M15 100 H30 M15 85 H25 M20 70 H30" stroke="#033D83" strokeWidth="3" strokeLinecap="round" />
           {/* Clock hands showing fast timing */}
           <path className="svg-animate-draw" d="M100 100 L100 55" stroke="url(#timeGrad)" strokeWidth="5" strokeLinecap="round" />
-          <path className="svg-animate-draw" d="M100 100 L135 100" stroke="#71717a" strokeWidth="4" strokeLinecap="round" />
-          <circle cx="100" cy="100" r="6" fill="#71717a" />
+          <path className="svg-animate-draw" d="M100 100 L135 100" stroke="#033D83" strokeWidth="4" strokeLinecap="round" />
+          <circle cx="100" cy="100" r="6" fill="#033D83" />
           {/* Motion arrow arc */}
-          <path className="svg-flow-lines" d="M150 50 A 70 70 0 0 1 170 100" stroke="#71717a" strokeWidth="3" strokeLinecap="round" />
+          <path className="svg-flow-lines" d="M150 50 A 70 70 0 0 1 170 100" stroke="#033D83" strokeWidth="3" strokeLinecap="round" />
         </svg>
       ),
     },
@@ -123,12 +123,12 @@ export default function OurValues() {
         <svg className="w-24 h-24 sm:w-36 sm:h-36 md:w-80 md:h-80 lg:w-[380px] lg:h-[380px] drop-shadow-[0_10px_20px_rgba(0,0,0,0.04)] shrink-0" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <linearGradient id="chatGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#71717a" />
-              <stop offset="100%" stopColor="#27272a" />
+              <stop offset="0%" stopColor="#033D83" />
+              <stop offset="100%" stopColor="#01234f" />
             </linearGradient>
             <linearGradient id="chatGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#a1a1aa" />
-              <stop offset="100%" stopColor="#52525b" />
+              <stop offset="0%" stopColor="#2563eb" />
+              <stop offset="100%" stopColor="#033D83" />
             </linearGradient>
           </defs>
           {/* Left Chat bubble */}
@@ -150,9 +150,9 @@ export default function OurValues() {
             fill="rgba(82, 82, 91, 0.04)"
           />
           {/* Interaction dots inside */}
-          <circle cx="75" cy="90" r="3" fill="#71717a" />
-          <circle cx="85" cy="90" r="3" fill="#71717a" />
-          <circle cx="95" cy="90" r="3" fill="#71717a" />
+          <circle cx="75" cy="90" r="3" fill="#033D83" />
+          <circle cx="85" cy="90" r="3" fill="#033D83" />
+          <circle cx="95" cy="90" r="3" fill="#033D83" />
         </svg>
       ),
     },
@@ -165,8 +165,8 @@ export default function OurValues() {
         <svg className="w-24 h-24 sm:w-36 sm:h-36 md:w-80 md:h-80 lg:w-[380px] lg:h-[380px] drop-shadow-[0_10px_20px_rgba(0,0,0,0.04)] shrink-0" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <linearGradient id="galvGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#71717a" />
-              <stop offset="100%" stopColor="#27272a" />
+              <stop offset="0%" stopColor="#033D83" />
+              <stop offset="100%" stopColor="#01234f" />
             </linearGradient>
           </defs>
           {/* Industrial structure grid representation */}
@@ -183,7 +183,7 @@ export default function OurValues() {
           <path className="svg-animate-draw" d="M40 160 H160 M52 120 H148 M63 80 H137 M75 40 H125" stroke="url(#galvGrad)" strokeWidth="3" />
           <path className="svg-animate-draw" d="M40 160 L148 120 M160 160 L52 120 M52 120 L137 80 M148 120 L63 80 M63 80 L125 40 M137 80 L75 40" stroke="url(#galvGrad)" strokeWidth="2.5" />
           {/* Liquid zinc bath/protecting halo at the base */}
-          <path className="svg-animate-draw" d="M25 160 C25 150 175 150 175 160 C175 170 25 170 25 160 Z" fill="rgba(82, 82, 91, 0.08)" stroke="#71717a" strokeWidth="2" />
+          <path className="svg-animate-draw" d="M25 160 C25 150 175 150 175 160 C175 170 25 170 25 160 Z" fill="rgba(82, 82, 91, 0.08)" stroke="#033D83" strokeWidth="2" />
         </svg>
       ),
     },
@@ -196,19 +196,19 @@ export default function OurValues() {
         <svg className="w-24 h-24 sm:w-36 sm:h-36 md:w-80 md:h-80 lg:w-[380px] lg:h-[380px] drop-shadow-[0_10px_20px_rgba(0,0,0,0.04)] shrink-0" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <linearGradient id="guideGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#71717a" />
-              <stop offset="100%" stopColor="#27272a" />
+              <stop offset="0%" stopColor="#033D83" />
+              <stop offset="100%" stopColor="#01234f" />
             </linearGradient>
           </defs>
           {/* Compass housing */}
           <circle className="svg-animate-draw" cx="100" cy="100" r="70" stroke="url(#guideGrad)" strokeWidth="4.5" fill="rgba(82, 82, 91, 0.02)" />
           {/* Compass Rose/Ticks */}
-          <path className="svg-animate-draw" d="M100 30 V40 M100 160 V170 M30 100 H40 M160 100 H170" stroke="#71717a" strokeWidth="3" strokeLinecap="round" />
+          <path className="svg-animate-draw" d="M100 30 V40 M100 160 V170 M30 100 H40 M160 100 H170" stroke="#033D83" strokeWidth="3" strokeLinecap="round" />
           {/* Winding path underneath */}
           <path
             className="svg-flow-lines"
             d="M60 140 Q 80 120 100 125 T 140 100"
-            stroke="#52525b"
+            stroke="#033D83"
             strokeWidth="3.5"
             strokeLinecap="round"
             opacity="0.8"
@@ -216,7 +216,7 @@ export default function OurValues() {
           {/* Compass needle pointing North-East */}
           <path className="svg-animate-draw" d="M100 100 L125 75 L110 110 Z" fill="url(#guideGrad)" />
           <path className="svg-animate-draw" d="M100 100 L75 125 L90 90 Z" fill="#e4e4e7" />
-          <circle cx="100" cy="100" r="6" fill="#27272a" />
+          <circle cx="100" cy="100" r="6" fill="#01234f" />
         </svg>
       ),
     },
@@ -300,9 +300,12 @@ export default function OurValues() {
         {/* Title layer */}
         <div className="max-w-[1650px] mx-auto w-full px-6 sm:px-10 lg:pl-18 pr-4 sm:pr-8 lg:pr-10 shrink-0 relative z-10">
           <div className="flex flex-col">
-            <span className="text-xs uppercase tracking-widest text-zinc-500 font-bold block mb-1 md:mb-3">
-              Core Principles
-            </span>
+            <div className="space-y-2 mb-3">
+              <span className="text-xs uppercase tracking-widest text-zinc-500 font-bold block">
+                Core Principles
+              </span>
+              <div className="w-12 h-0.5 bg-regal-navy" />
+            </div>
             <h2 className="text-3xl sm:text-4xl lg:text-6xl font-sans font-semibold tracking-tight text-zinc-950 leading-tight">
               Our Values
             </h2>
@@ -346,14 +349,14 @@ export default function OurValues() {
 
                     {/* Text column wrapped in a beautiful card background with left accent bar */}
                     <div
-                      className={`w-full md:col-span-7 md:col-start-6 bg-white border-l-[4px] md:border-l-[6px] border-y border-r border-zinc-200/80 border-l-zinc-800 rounded-r-2xl md:rounded-r-3xl rounded-l-md p-5 sm:p-8 md:p-12 shadow-[0_15px_40px_rgba(0,0,0,0.03)] flex flex-col gap-2 sm:gap-5 transition-all duration-[1200ms] ease-[cubic-bezier(0.16,1,0.3,1)] transform ${
+                      className={`w-full md:col-span-7 md:col-start-6 bg-white border-l-[4px] md:border-l-[6px] border-y border-r border-zinc-200/80 border-l-regal-navy rounded-r-2xl md:rounded-r-3xl rounded-l-md p-5 sm:p-8 md:p-12 shadow-[0_15px_40px_rgba(0,0,0,0.03)] flex flex-col gap-2 sm:gap-5 transition-all duration-[1200ms] ease-[cubic-bezier(0.16,1,0.3,1)] transform ${
                         isActive 
                           ? "opacity-100 scale-100 translate-y-0" 
                           : "opacity-0 scale-75 translate-y-8 pointer-events-none"
                       }`}
                     >
                       {/* Small Category pill */}
-                      <div className="px-2 py-0.5 md:px-2.5 md:py-1 bg-zinc-100 text-zinc-600 rounded-md text-[9px] md:text-[10px] font-bold tracking-widest uppercase w-fit">
+                      <div className="px-2 py-0.5 md:px-2.5 md:py-1 bg-secondary-surface text-regal-navy rounded-md text-[9px] md:text-[10px] font-bold tracking-widest uppercase w-fit">
                         {val.category}
                       </div>
 
@@ -381,7 +384,7 @@ export default function OurValues() {
                       
                       {/* Vertical line indicator scaling from left */}
                       <div
-                        className={`w-12 md:w-16 h-0.5 md:h-1 bg-gradient-to-r from-zinc-500 to-zinc-450 rounded-full transition-all duration-[1000ms] ease-[cubic-bezier(0.16,1,0.3,1)] delay-[550ms] transform origin-left ${
+                        className={`w-12 md:w-16 h-0.5 md:h-1 bg-regal-navy rounded-full transition-all duration-[1000ms] ease-[cubic-bezier(0.16,1,0.3,1)] delay-[550ms] transform origin-left ${
                           isActive ? "scale-x-100 opacity-100" : "scale-x-0 opacity-0"
                         }`}
                       />
@@ -415,7 +418,7 @@ export default function OurValues() {
                   onClick={() => navigateTo(idx)}
                   className={`h-1.5 rounded-full transition-all duration-500 cursor-pointer ${
                     idx === activeIndex 
-                      ? "w-6 sm:w-10 bg-zinc-800" 
+                      ? "w-6 sm:w-10 bg-regal-navy" 
                       : "w-1.5 bg-zinc-300 hover:bg-zinc-400"
                   }`}
                   aria-label={`Go to slide ${idx + 1}`}
@@ -438,7 +441,7 @@ export default function OurValues() {
                 className={`w-7 h-7 sm:w-8 sm:h-8 rounded-full border border-zinc-200 flex items-center justify-center transition-all bg-white shadow-xs cursor-pointer ${
                   activeIndex === 0 
                     ? "opacity-35 cursor-not-allowed" 
-                    : "hover:bg-zinc-900 hover:text-white hover:border-zinc-900 active:scale-90"
+                    : "hover:bg-regal-navy hover:text-white hover:border-regal-navy active:scale-90"
                 }`}
                 title="Previous Slide"
               >
@@ -453,7 +456,7 @@ export default function OurValues() {
                 className={`w-7 h-7 sm:w-8 sm:h-8 rounded-full border border-zinc-200 flex items-center justify-center transition-all bg-white shadow-xs cursor-pointer ${
                   activeIndex === values.length - 1 
                     ? "opacity-35 cursor-not-allowed" 
-                    : "hover:bg-zinc-900 hover:text-white hover:border-zinc-900 active:scale-90"
+                    : "hover:bg-regal-navy hover:text-white hover:border-regal-navy active:scale-90"
                 }`}
                 title="Next Slide"
               >

@@ -26,7 +26,7 @@ export default function AboutStory() {
   return (
     <section
       ref={sectionRef}
-      className="w-full bg-white text-zinc-900 pt-8 pb-6 md:pt-12 md:pb-10 overflow-hidden transition-colors duration-300"
+      className="w-full bg-background text-zinc-900 pt-8 pb-6 md:pt-12 md:pb-10 overflow-hidden transition-colors duration-300"
     >
       <div className="max-w-[1650px] mx-auto px-4 sm:px-8 lg:px-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-20 items-start">
@@ -63,16 +63,17 @@ export default function AboutStory() {
               We manufacture transmission towers, substation structures, RSJ poles, earthing solutions, gratings, solar infrastructure products, and railway structures - supplying wherever our clients need us across India.
             </p>
             
-            <p className="text-lg sm:text-xl font-bold leading-relaxed text-zinc-950 italic border-l-4 border-zinc-900 pl-4 my-2">
+            <p className="text-lg sm:text-xl font-bold leading-relaxed text-zinc-950 italic border-l-4 border-regal-navy pl-4 my-2">
               Every product that leaves our facility is built on one principle: “Long term durability”
             </p>
 
             <div className="pt-4">
               <a
-                href="/#services"
-                className="inline-block px-8 py-3.5 border border-zinc-900 text-zinc-900 font-bold text-xs uppercase tracking-widest hover:bg-zinc-900 hover:text-white transition-all duration-300"
+                href="/products"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-regal-navy hover:bg-regal-navy/90 text-white font-bold text-xs uppercase tracking-widest transition-all duration-300 rounded-sm shadow-md"
               >
-                Our Products
+                <span>Our Products</span>
+                <span className="text-sm">→</span>
               </a>
             </div>
           </div>

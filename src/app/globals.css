@@ -1,13 +1,17 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: #FDFDFD;
   --foreground: #171717;
+  --secondary-surface: #F6F6F6;
+  --regal-navy: #033D83;
 }
 
 @theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-secondary-surface: var(--secondary-surface);
+  --color-regal-navy: var(--regal-navy);
   --font-sans: var(--font-vazirmatn), sans-serif;
   --font-heading: var(--font-ivy-mode), serif;
   --font-eyebrow: var(--font-inter), sans-serif;

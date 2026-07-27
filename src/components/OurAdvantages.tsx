@@ -114,18 +114,19 @@ export default function OurAdvantages() {
   return (
     <section
       ref={sectionRef}
-      className="w-full bg-zinc-50 text-zinc-900 py-20 md:py-28 overflow-hidden transition-colors duration-300"
+      className="w-full bg-secondary-surface text-zinc-900 py-20 md:py-28 overflow-hidden transition-colors duration-300"
     >
       <div className="max-w-[1650px] mx-auto px-4 sm:px-8 lg:px-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-stretch">
           
           {/* Left Column: Advantage Blocks & Header */}
           <div className="lg:col-span-7 flex flex-col justify-between">
-            <div className="space-y-6">
-              <span className="text-xs uppercase tracking-widest text-zinc-500 font-bold">
+            <div className="space-y-2">
+              <span className="text-xs uppercase tracking-widest text-zinc-500 font-bold font-eyebrow">
                 Why Partner With Us
               </span>
-              <h2 className="text-4xl sm:text-5xl lg:text-6xl font-sans font-semibold tracking-tight text-zinc-950 leading-tight">
+              <div className="w-12 h-0.5 bg-regal-navy" />
+              <h2 className="text-4xl sm:text-5xl lg:text-6xl font-sans font-semibold tracking-tight text-zinc-950 leading-tight pt-2">
                 {["What sets", "SriSinghaniya apart."].map((line, idx) => (
                   <span key={idx} className="block overflow-hidden py-1">
                     <span
@@ -150,7 +151,7 @@ export default function OurAdvantages() {
                   className="p-8 rounded-2xl border border-zinc-200/60 bg-white shadow-md hover:shadow-lg transition-shadow duration-300 select-none"
                 >
                   <div className="flex items-center gap-3">
-                    <span className="flex items-center justify-center w-8 h-8 rounded-full bg-zinc-100 text-xs font-bold text-zinc-600">
+                    <span className="flex items-center justify-center w-8 h-8 rounded-full bg-zinc-100 text-xs font-bold text-regal-navy">
                       {item.id}
                     </span>
                     <h3 className="text-lg font-bold text-zinc-950">
@@ -167,8 +168,8 @@ export default function OurAdvantages() {
             {/* CTA Button */}
             <div className="pt-10">
               <a
-                href="#"
-                className="inline-flex items-center gap-2 px-8 py-3.5 border border-zinc-900 text-zinc-900 font-bold text-xs uppercase tracking-widest hover:bg-zinc-900 hover:text-white transition-all duration-300"
+                href="/about"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-regal-navy hover:bg-regal-navy/90 text-white font-bold text-xs uppercase tracking-widest transition-all duration-300 rounded-sm shadow-md"
               >
                 <span>Discover More About Us</span>
                 <span className="text-sm">→</span>

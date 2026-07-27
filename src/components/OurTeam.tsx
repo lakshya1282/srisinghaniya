@@ -116,9 +116,12 @@ export default function OurTeam() {
         
         {/* Title in the Top Left */}
         <div className="mb-8 lg:mb-20">
-          <span className="text-xs uppercase tracking-widest text-zinc-500 font-bold block mb-2 md:mb-3">
-            Internal Operations
-          </span>
+          <div className="space-y-2 mb-3">
+            <span className="text-xs uppercase tracking-widest text-zinc-500 font-bold block">
+              Internal Operations
+            </span>
+            <div className="w-12 h-0.5 bg-regal-navy" />
+          </div>
           <h2 className="text-3xl sm:text-5xl lg:text-6xl font-sans font-semibold tracking-tight text-zinc-950 leading-tight">
             Our Team
           </h2>
@@ -139,7 +142,7 @@ export default function OurTeam() {
                 onClick={() => activeIndex > 0 && changeDept(activeIndex - 1)}
                 disabled={activeIndex === 0}
                 className={`w-8 h-8 rounded-full border border-zinc-200 flex items-center justify-center bg-white shadow-xs cursor-pointer ${
-                  activeIndex === 0 ? "opacity-35 cursor-not-allowed" : "hover:bg-zinc-900 hover:text-white hover:border-zinc-900 active:scale-95"
+                  activeIndex === 0 ? "opacity-35 cursor-not-allowed" : "hover:bg-regal-navy hover:text-white hover:border-regal-navy active:scale-95"
                 }`}
                 title="Previous Department"
               >
@@ -151,7 +154,7 @@ export default function OurTeam() {
                 onClick={() => activeIndex < departments.length - 1 && changeDept(activeIndex + 1)}
                 disabled={activeIndex === departments.length - 1}
                 className={`w-8 h-8 rounded-full border border-zinc-200 flex items-center justify-center bg-white shadow-xs cursor-pointer ${
-                  activeIndex === departments.length - 1 ? "opacity-35 cursor-not-allowed" : "hover:bg-zinc-900 hover:text-white hover:border-zinc-900 active:scale-95"
+                  activeIndex === departments.length - 1 ? "opacity-35 cursor-not-allowed" : "hover:bg-regal-navy hover:text-white hover:border-regal-navy active:scale-95"
                 }`}
                 title="Next Department"
               >
@@ -172,7 +175,7 @@ export default function OurTeam() {
                   onClick={() => changeDept(idx)}
                   className={`text-left text-base sm:text-lg lg:text-2xl font-sans font-semibold py-1.5 lg:py-2 px-3 lg:px-0 transition-all duration-300 whitespace-nowrap cursor-pointer ${
                     idx === activeIndex
-                      ? "text-zinc-950 border-b-2 border-b-zinc-950 lg:border-b-0 lg:border-l-2 lg:border-l-zinc-950 lg:pl-4"
+                      ? "text-zinc-950 border-b-2 border-b-regal-navy lg:border-b-0 lg:border-l-2 lg:border-l-regal-navy lg:pl-4"
                       : "text-zinc-400 border-b-2 border-b-transparent lg:border-b-0 lg:border-l-2 lg:border-l-transparent hover:text-zinc-600 lg:pl-0"
                   }`}
                 >

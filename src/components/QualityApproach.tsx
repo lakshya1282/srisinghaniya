@@ -48,7 +48,7 @@ export default function QualityApproach() {
   return (
     <section
       ref={sectionRef}
-      className="w-full bg-zinc-50 text-zinc-900 py-16 md:py-24 overflow-hidden border-t border-zinc-200/50 border-b border-zinc-200/50"
+      className="w-full bg-secondary-surface text-zinc-900 py-16 md:py-24 overflow-hidden border-t border-zinc-200/50 border-b border-zinc-200/50"
     >
       <div className="max-w-[1650px] mx-auto px-4 sm:px-8 lg:px-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
@@ -94,7 +94,7 @@ export default function QualityApproach() {
               }`}
             >
               <div className="flex items-center gap-4">
-                <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-zinc-50 border border-zinc-200/80 shadow-sm text-zinc-900">
+                <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-secondary-surface shadow-xs text-regal-navy shrink-0">
                   {/* Shield Check Icon */}
                   <svg
                     className="w-6 h-6"
@@ -133,7 +133,7 @@ export default function QualityApproach() {
               }`}
             >
               <div className="flex items-center gap-4">
-                <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-zinc-50 border border-zinc-200/80 shadow-sm text-zinc-900">
+                <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-secondary-surface shadow-xs text-regal-navy shrink-0">
                   {/* Flag/Mountain Icon */}
                   <svg
                     className="w-6 h-6"
@@ -165,7 +165,7 @@ export default function QualityApproach() {
                   {
                     icon: (
                       <svg
-                        className="w-5 h-5 text-zinc-700"
+                        className="w-5 h-5 text-regal-navy"
                         fill="none"
                         stroke="currentColor"
                         strokeWidth="2"
@@ -183,7 +183,7 @@ export default function QualityApproach() {
                   {
                     icon: (
                       <svg
-                        className="w-5 h-5 text-zinc-700"
+                        className="w-5 h-5 text-regal-navy"
                         fill="none"
                         stroke="currentColor"
                         strokeWidth="2"
@@ -197,7 +197,7 @@ export default function QualityApproach() {
                   {
                     icon: (
                       <svg
-                        className="w-5 h-5 text-zinc-700"
+                        className="w-5 h-5 text-regal-navy"
                         fill="none"
                         stroke="currentColor"
                         strokeWidth="2"
@@ -215,7 +215,7 @@ export default function QualityApproach() {
                   {
                     icon: (
                       <svg
-                        className="w-5 h-5 text-zinc-700"
+                        className="w-5 h-5 text-regal-navy"
                         fill="none"
                         stroke="currentColor"
                         strokeWidth="2"
@@ -232,7 +232,7 @@ export default function QualityApproach() {
                   },
                 ].map((item, idx) => (
                   <div key={idx} className="flex items-start gap-4 p-4 rounded-xl border border-zinc-100 bg-zinc-50/50 hover:bg-zinc-50 transition-colors duration-300">
-                    <div className="flex items-center justify-center w-10 h-10 rounded-full bg-white border border-zinc-200/80 shadow-sm shrink-0">
+                    <div className="flex items-center justify-center w-10 h-10 rounded-full bg-secondary-surface shadow-xs shrink-0 text-regal-navy">
                       {item.icon}
                     </div>
                     <span className="text-sm font-semibold leading-relaxed text-zinc-700">

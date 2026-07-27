@@ -129,7 +129,7 @@ export default function OurProducts() {
           setIsVisible(true);
         }
       },
-      { threshold: 0.30 } // Trigger when 30% visible
+      { threshold: 0.05 } // Trigger when 5% visible
     );
     if (sectionRef.current) {
       observer.observe(sectionRef.current);
@@ -143,16 +143,17 @@ export default function OurProducts() {
   return (
     <section
       ref={sectionRef}
-      className="w-full bg-white text-zinc-900 py-20 md:py-28 overflow-hidden transition-colors duration-300"
+      className="w-full bg-background text-zinc-900 py-20 md:py-28 overflow-hidden transition-colors duration-300"
     >
       <div className="max-w-[1650px] mx-auto px-4 sm:px-8 lg:px-10 space-y-12">
         
         {/* Section Header */}
-        <div className="space-y-4">
-          <span className="text-xs uppercase tracking-widest text-zinc-500 font-bold">
+        <div className="space-y-2">
+          <span className="text-xs uppercase tracking-widest text-zinc-500 font-bold font-eyebrow">
             Portfolio
           </span>
-          <h2 className="text-4xl sm:text-5xl font-sans font-semibold tracking-tight text-zinc-950">
+          <div className="w-12 h-0.5 bg-regal-navy" />
+          <h2 className="text-4xl sm:text-5xl font-sans font-semibold tracking-tight text-zinc-950 pt-2">
             {["Our Products"].map((line, idx) => (
               <span key={idx} className="block overflow-hidden py-1">
                 <span
@@ -211,7 +212,7 @@ export default function OurProducts() {
                   </div>
                   
                   {/* Circle Action Button */}
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-blue-600 hover:bg-blue-500 flex items-center justify-center transition-colors shadow-lg">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-regal-navy hover:bg-regal-navy/90 flex items-center justify-center transition-colors shadow-lg">
                     <svg className="w-5 h-5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                       <line x1="5" y1="12" x2="19" y2="12" />
                       <polyline points="12 5 19 12 12 19" />
@@ -269,8 +270,8 @@ export default function OurProducts() {
         {/* Global CTA button */}
         <div className="flex justify-center pt-6">
           <a
-            href="#"
-            className="inline-flex items-center gap-2 px-8 py-3.5 border border-zinc-900 text-zinc-900 font-bold text-xs uppercase tracking-widest hover:bg-zinc-900 hover:text-white transition-all duration-300 rounded-md"
+            href="/products"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-regal-navy hover:bg-regal-navy/90 text-white font-bold text-xs uppercase tracking-widest transition-all duration-300 rounded-sm shadow-md"
           >
             <span>View All Products</span>
             <span className="text-sm">→</span>

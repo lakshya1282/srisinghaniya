@@ -12,7 +12,7 @@ export const metadata = {
 
 export default function ProductsPage() {
   return (
-    <main className="min-h-screen bg-black font-sans text-white">
+    <main className="min-h-screen bg-background font-sans text-foreground">
       <Navbar />
       <ProductsHero />
       <ProductsIntro />
