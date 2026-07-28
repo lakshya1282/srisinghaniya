@@ -171,7 +171,7 @@ export default function ProductsHero() {
               {/* Content for EXPANDED card */}
               <div
                 className={`relative z-10 p-8 sm:p-16 max-w-2xl text-white flex flex-col items-start gap-4 transition-all duration-700 delay-150 ${
-                  isExpanded && isVisible && !isTransitioning
+                  isExpanded && isVisible
                     ? "opacity-100 translate-y-0"
                     : "opacity-0 translate-y-8 absolute pointer-events-none"
                 }`}
@@ -179,8 +179,10 @@ export default function ProductsHero() {
                 <div className="inline-block px-3 py-1 bg-white/10 backdrop-blur-md rounded-sm text-xs font-bold tracking-widest text-white/95">
                   {product.id}
                 </div>
-                <h1 ref={isExpanded ? desktopTitleRef : undefined} className="text-3xl sm:text-5xl font-extrabold tracking-tight uppercase leading-none mt-2">
-                  {product.title}
+                <h1 ref={isExpanded ? desktopTitleRef : undefined} className="text-3xl sm:text-5xl font-extrabold tracking-tight uppercase leading-none mt-2 mask-reveal-bottom-up-outer">
+                  <span className={`mask-reveal-bottom-up-inner ${isExpanded && isVisible ? "active" : ""}`}>
+                    {product.title}
+                  </span>
                 </h1>
                 <p ref={isExpanded ? desktopDescRef : undefined} className="text-sm sm:text-base text-zinc-300 font-medium leading-relaxed max-w-lg">
                   {product.desc}
@@ -252,8 +254,10 @@ export default function ProductsHero() {
                 <div className="inline-block px-2.5 py-0.5 bg-white/15 backdrop-blur-md rounded-sm text-[10px] font-bold tracking-widest text-white/90">
                   {product.id}
                 </div>
-                <h1 ref={isActive ? mobileTitleRef : undefined} className="text-2xl sm:text-3xl font-extrabold tracking-tight uppercase leading-none mt-1">
-                  {product.title}
+                <h1 ref={isActive ? mobileTitleRef : undefined} className="text-2xl sm:text-3xl font-extrabold tracking-tight uppercase leading-none mt-1 mask-reveal-bottom-up-outer">
+                  <span className={`mask-reveal-bottom-up-inner ${isActive ? "active" : ""}`}>
+                    {product.title}
+                  </span>
                 </h1>
                 <p ref={isActive ? mobileDescRef : undefined} className="text-xs text-zinc-300 leading-relaxed font-medium">
                   {product.desc}

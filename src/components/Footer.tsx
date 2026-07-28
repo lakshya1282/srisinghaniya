@@ -13,9 +13,13 @@ export default function Footer() {
           {/* Logo & Social Info */}
           <div className="space-y-6">
             <div className="flex items-center">
-              <span className="text-2xl md:text-3xl font-extrabold tracking-tight text-zinc-950">
-                YOUR LOGO
-              </span>
+              <a href="/" className="flex items-center">
+                <img
+                  src="/logo.png"
+                  alt="SriSinghaniya Logo"
+                  className="h-16 md:h-22 w-auto object-contain rounded-xl"
+                />
+              </a>
             </div>
             
             {/* Social Icons row */}
