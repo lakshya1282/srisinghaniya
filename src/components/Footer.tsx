@@ -15,7 +15,7 @@ export default function Footer() {
             <div className="flex items-center">
               <a href="/" className="flex items-center">
                 <img
-                  src="/logo.png"
+                  src="/logo.jpg"
                   alt="SriSinghaniya Logo"
                   className="h-16 md:h-22 w-auto object-contain rounded-xl"
                 />
