@@ -28,37 +28,37 @@ export default function OurTeam() {
     {
       name: "Marketing",
       desc: "Our marketing specialists connect clients across India with our heavy industrial fabrication and galvanizing solutions.",
-      image: "/images/about/marketing.jpg",
+      image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=800&q=80",
       ref: ref1,
     },
     {
       name: "Planning",
       desc: "Engineers and layout planners align manufacturing targets with client-specified schedules under a unified pipeline.",
-      image: "/images/about/planning.jpg",
+      image: "https://images.unsplash.com/photo-1531538606174-0f90ff5dce83?auto=format&fit=crop&w=800&q=80",
       ref: ref2,
     },
     {
       name: "Fabrication",
       desc: "Skilled operators carry out accurate cutting, punching, and welding of structural components under strict tolerance standards.",
-      image: "/images/about/fabrication.png",
+      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80",
       ref: ref3,
     },
     {
       name: "Galvanizing",
       desc: "Our hot-dip galvanizing bath coats our structures with heavy zinc coatings to achieve extreme long-term corrosion resistance.",
-      image: "/images/about/galvanizing.png",
+      image: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=800&q=80",
       ref: ref4,
     },
     {
       name: "Quality",
       desc: "A dedicated quality team performs chemical, physical, and visual inspections for PSU and industrial project clearance.",
-      image: "/images/about/quality.jpeg",
+      image: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80",
       ref: ref5,
     },
     {
       name: "Dispatch",
       desc: "Logistics coordinators prepare shipments systematically to deliver structures on-time to power grid sites.",
-      image: "/images/about/dispatch.jpg",
+      image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80",
       ref: ref6,
     },
   ];

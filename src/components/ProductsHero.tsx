@@ -53,10 +53,10 @@ const products: ProductItem[] = [
   },
   {
     id: "05",
-    title: "Gratings",
+    title: "Electrogratings",
     desc: "Fabricated steel gratings for industrial and infrastructure applications, offering strength, durability, and safe walkway/platform solutions.",
-    image: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1200&q=80",
-    href: "/products#gratings",
+    image: "/images/products/electrograting.png",
+    href: "/products#electrogratings",
   },
   {
     id: "06",
