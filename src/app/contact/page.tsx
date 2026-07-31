@@ -13,7 +13,7 @@ export default function ContactPage() {
       <Navbar theme="light" />
 
       {/* Header Spacer to ensure absolute absolute navbar is legible and content starts below it */}
-      <div className="h-[92px] md:h-[116px] bg-white" />
+      <div className="h-[90px] md:h-[110px] bg-white" />
 
       {/* Main Single Contact Section */}
       <section className="flex-1 w-full relative overflow-hidden py-16 md:py-24 bg-background text-zinc-900 flex items-center">

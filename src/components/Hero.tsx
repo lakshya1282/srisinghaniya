@@ -154,15 +154,14 @@ export default function Hero() {
   return (
     <section
       ref={heroRef}
-      className={`relative w-full h-screen min-h-[550px] md:min-h-[650px] overflow-hidden bg-black text-white select-none transition-opacity duration-1000 ease-out ${
-        isMounted ? "opacity-100" : "opacity-0"
-      }`}
+      className={`relative w-full h-screen min-h-[550px] md:min-h-[650px] overflow-hidden bg-black text-white select-none transition-opacity duration-1000 ease-out ${isMounted ? "opacity-100" : "opacity-0"
+        }`}
     >
       {/* ── Static background (stays until progress bar completes) ── */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <picture className="block w-full h-full">
           <source media="(min-width: 768px)" srcSet={current.desktopImage} />
-          <img ref={staticImgRef} src={current.mobileImage} alt={current.title} className="w-full h-full object-cover object-center transition-transform duration-300 ease-out" />
+          <img ref={staticImgRef} src={current.mobileImage} alt={current.title} className="w-full h-full object-cover object-top transition-transform duration-300 ease-out" />
         </picture>
         <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-black/20 md:bg-gradient-to-r md:from-black/75 md:via-black/30 md:to-transparent" />
       </div>
@@ -172,7 +171,7 @@ export default function Hero() {
         <div className="animate-card-bounce-fill overflow-hidden" style={bounceStyle!}>
           <picture className="block w-full h-full">
             <source media="(min-width: 768px)" srcSet={nextSlide.desktopImage} />
-            <img ref={bouncingImgRef} src={nextSlide.mobileImage} alt={nextSlide.title} className="w-full h-full object-cover object-center transition-transform duration-300 ease-out" />
+            <img ref={bouncingImgRef} src={nextSlide.mobileImage} alt={nextSlide.title} className="w-full h-full object-cover object-top transition-transform duration-300 ease-out" />
           </picture>
           <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-black/20 md:bg-gradient-to-r md:from-black/75 md:via-black/30 md:to-transparent" />
         </div>

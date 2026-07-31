@@ -1,9 +1,14 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
-export default function Navbar({ theme = "dark" }: { theme?: "light" | "dark" }) {
+export default function Navbar({ theme = "light" }: { theme?: "light" | "dark" }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   const navLinks = [
     { name: "ABOUT", href: "/about", hasDropdown: false },
@@ -13,24 +18,26 @@ export default function Navbar({ theme = "dark" }: { theme?: "light" | "dark" })
   ];
 
   return (
-    <header className="absolute top-0 left-0 right-0 z-50 bg-transparent border-b border-transparent transition-all duration-300">
+    <header className={`absolute top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-white/20 shadow-xs transition-all duration-[1200ms] ease-[cubic-bezier(0.16,1,0.3,1)] transform ${
+      isMounted ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"
+    }`}>
       
       {/* Logo */}
-      <div className="absolute top-4 left-4 md:top-6 md:left-8 z-50">
+      <div className="absolute top-2 left-4 md:top-2.5 md:left-8 z-50">
         <a href="/" className="block">
           <img
-            src="/logo.jpg"
+            src="/pnglogo.png"
             alt="SriSinghaniya Logo"
-            className="h-[80px] md:h-[100px] w-auto object-contain rounded-md shadow-md"
+            className="h-[74px] md:h-[92px] w-auto object-contain rounded-md"
           />
         </a>
       </div>
 
       <div className="max-w-[1650px] mx-auto px-4 sm:px-8 lg:px-10">
-        <div className="flex items-center justify-between h-[92px] md:h-[116px] relative">
+        <div className="flex items-center justify-between h-[90px] md:h-[110px] relative">
           
           {/* Logo Spacer */}
-          <div className="w-[100px] md:w-[130px] flex-shrink-0" />
+          <div className="w-[94px] md:w-[118px] flex-shrink-0" />
 
           {/* Desktop Nav Items */}
           <nav className="hidden md:flex items-center space-x-12">
@@ -102,7 +109,7 @@ export default function Navbar({ theme = "dark" }: { theme?: "light" | "dark" })
               href={link.href}
               className="block px-3 py-2 rounded-md text-sm font-semibold text-gray-200 hover:text-white hover:bg-white/10 transition-colors"
             >
-              {link.name}
+              {navLinks.find((l) => l.name === link.name)?.name || link.name}
             </a>
           ))}
           <div className="pt-4 border-t border-white/10 flex items-center justify-between px-3">
