@@ -2,14 +2,14 @@
 
 import React, { useState } from "react";
 
-export default function Navbar() {
+export default function Navbar({ theme = "dark" }: { theme?: "light" | "dark" }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navLinks = [
     { name: "ABOUT", href: "/about", hasDropdown: false },
     { name: "PRODUCTS", href: "/products", hasDropdown: false },
     { name: "SERVICES", href: "/services", hasDropdown: false },
-    { name: "CONTACT", href: "/#contact", hasDropdown: false },
+    { name: "CONTACT", href: "/contact", hasDropdown: false },
   ];
 
   return (
@@ -38,7 +38,11 @@ export default function Navbar() {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-[12.5px] font-bold tracking-widest text-white hover:text-white/85 transition-colors flex items-center gap-1 py-2 drop-shadow-md"
+                className={`text-[12.5px] font-bold tracking-widest transition-colors flex items-center gap-1 py-2 ${
+                  theme === "light" 
+                    ? "text-zinc-900 hover:text-zinc-600" 
+                    : "text-white hover:text-white/85 drop-shadow-md"
+                }`}
               >
                 {link.name}
                 {link.hasDropdown && (
@@ -51,9 +55,11 @@ export default function Navbar() {
           </nav>
 
           {/* Right Action Icons */}
-          <div className="hidden lg:flex items-center space-x-5 text-white">
+          <div className={`hidden lg:flex items-center space-x-5 ${theme === "light" ? "text-zinc-900" : "text-white"}`}>
             {/* Language switch */}
-            <button className="flex items-center gap-1 text-xs font-bold hover:text-white/80 transition-colors py-1 px-2 rounded-md hover:bg-white/10 cursor-pointer">
+            <button className={`flex items-center gap-1 text-xs font-bold transition-colors py-1 px-2 rounded-md cursor-pointer ${
+              theme === "light" ? "hover:bg-zinc-100" : "hover:bg-white/10"
+            }`}>
               <span>ENG</span>
               <svg className="w-3 h-3 stroke-[2.5]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <polyline points="6 9 12 15 18 9"></polyline>
@@ -62,10 +68,12 @@ export default function Navbar() {
           </div>
 
           {/* Mobile Menu Toggle Button */}
-          <div className="flex items-center md:hidden gap-3 text-white">
+          <div className={`flex items-center md:hidden gap-3 ${theme === "light" ? "text-zinc-900" : "text-white"}`}>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 rounded-md text-white hover:text-white/80 focus:outline-hidden"
+              className={`p-2 rounded-md focus:outline-hidden ${
+                theme === "light" ? "text-zinc-900 hover:text-zinc-600" : "text-white hover:text-white/80"
+              }`}
               aria-label="Toggle menu"
             >
               {mobileMenuOpen ? (

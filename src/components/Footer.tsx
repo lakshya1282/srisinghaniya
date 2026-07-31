@@ -95,7 +95,7 @@ export default function Footer() {
               <li><a href="#" className="hover:text-zinc-950 transition-colors">Newsroom</a></li>
               <li><a href="#" className="hover:text-zinc-950 transition-colors">Careers</a></li>
               <li><a href="#" className="hover:text-zinc-950 transition-colors">Downloads</a></li>
-              <li><a href="#" className="hover:text-zinc-950 transition-colors">Contact Us</a></li>
+              <li><a href="/contact" className="hover:text-zinc-950 transition-colors">Contact Us</a></li>
             </ul>
           </div>
 
